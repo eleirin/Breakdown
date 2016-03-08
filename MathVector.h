@@ -9,6 +9,7 @@ public:
 	using sf::Vector2f::Vector2f;
 	MathVector(const sf::Vector2f &v);
 	MathVector(double angle);
+	~MathVector(void);
 	
 	float lengthSquared(void) const;
 	float length(void) const;

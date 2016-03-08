@@ -12,6 +12,9 @@ public:
 		Bullet(pos, MathVector((i * 2 * pi / max) + j * pi / 2), 100)
 	{
 	}
+	virtual ~SpiralBullet()
+	{
+	}
 };
 
 class Spiral : public SpellCard
@@ -19,6 +22,10 @@ class Spiral : public SpellCard
 public:
 	Spiral(ObjectManager *ts, MathVector pos):
 		SpellCard(ts, pos, 25, 0.1)
+	{
+	}
+
+	virtual ~Spiral()
 	{
 	}
 

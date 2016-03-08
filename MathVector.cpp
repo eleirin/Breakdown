@@ -14,6 +14,10 @@ MathVector::MathVector(double angle):
 {
 }
 
+MathVector::~MathVector(void)
+{
+}
+
 float MathVector::lengthSquared(void) const
 {
 	return x*x + y*y;

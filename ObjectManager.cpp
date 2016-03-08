@@ -6,6 +6,14 @@ ObjectManager::ObjectManager(void)
 {
 }
 
+ObjectManager::~ObjectManager(void)
+{
+	for(auto &i: m_AliveList)
+	{
+		delete i;
+	}
+}
+
 void ObjectManager::update(float dt)
 {
 	std::list<std::list<Object *>::iterator> DeadList;
