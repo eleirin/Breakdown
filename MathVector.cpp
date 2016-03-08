@@ -14,17 +14,17 @@ MathVector::MathVector(double angle):
 {
 }
 
-float MathVector::lengthSquared() const
+float MathVector::lengthSquared(void) const
 {
 	return x*x + y*y;
 }
 
-float MathVector::length() const
+float MathVector::length(void) const
 {
 	return sqrt(lengthSquared());
 }
 
-MathVector MathVector::normalized() const
+MathVector MathVector::normalized(void) const
 {
 	float len = length();
 

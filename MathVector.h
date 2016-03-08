@@ -10,8 +10,8 @@ public:
 	MathVector(const sf::Vector2f &v);
 	MathVector(double angle);
 	
-	float lengthSquared() const;
-	float length() const;
-	MathVector normalized() const;
+	float lengthSquared(void) const;
+	float length(void) const;
+	MathVector normalized(void) const;
 };
 #endif //HEAD_MATHVECTOR

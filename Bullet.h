@@ -8,7 +8,7 @@ class Bullet: public Object
 {
 public:
 	Bullet(MathVector pos, MathVector direction, float vitesse);
-	virtual ~Bullet();
+	virtual ~Bullet(void);
 	void update(float dt) override;
 	void draw(sf::RenderTarget &rt, sf::RenderStates s) const override final;
 

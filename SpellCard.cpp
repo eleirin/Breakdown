@@ -19,7 +19,7 @@ SpellCard::SpellCard(ObjectManager *ts, MathVector pos, std::list<float> list_de
 {
 }
 
-SpellCard::~SpellCard()
+SpellCard::~SpellCard(void)
 {
 }
 

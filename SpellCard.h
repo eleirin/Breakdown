@@ -34,7 +34,7 @@ public:
 	void update(float dt) override final;
 	void draw(sf::RenderTarget &, sf::RenderStates) const override;
 
-	template<typename U> Bullet* spawn();
+	template<typename U> Bullet* spawn(void);
 	template<typename U> std::list<Bullet*> spawn(int duplicates);
 
 	virtual void explode(int i, int max) = 0;

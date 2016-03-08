@@ -9,7 +9,7 @@ Bullet::Bullet(MathVector pos, MathVector direction, float vitesse) :
 {
 }
 
-Bullet::~Bullet()
+Bullet::~Bullet(void)
 {
 }
 
