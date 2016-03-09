@@ -24,12 +24,5 @@ private:
 	std::list<Object*> m_AliveList;
 };
 
-template<typename U, typename... Args>
-U* ObjectManager::add(Args... args)
-{
-	U *created = new U(args...);
-	m_AliveList.push_front(created);
-	return created;
-}
-
+#include "ObjectManager.tpp"
 #endif //HEAD_BULLETMANAGER
