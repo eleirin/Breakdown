@@ -15,7 +15,7 @@ class ObjectManager: public Object
 {
 public:
 	ObjectManager(void);
-	~ObjectManager(void);
+	virtual ~ObjectManager(void);
 	template<typename U, typename... Args> U* add(Args... args);
 	void update(float dt) override;
 	void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;

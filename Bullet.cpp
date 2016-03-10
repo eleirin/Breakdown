@@ -30,6 +30,10 @@ Bullet::Sprite::Sprite(int Diameter):
 	m_Circle.setFillColor(sf::Color::Green); 
 }
 
+Bullet::Sprite::~Sprite()
+{
+}
+
 void Bullet::Sprite::draw(sf::RenderTarget &rt, sf::RenderStates s) const
 {
 	rt.draw(m_Circle, s);

@@ -16,6 +16,7 @@ private:
 	struct Sprite: public sf::Drawable
 	{
 		Sprite(int Diameter);
+		virtual ~Sprite();
 		void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
 		void setPosition(MathVector xy);
 		sf::CircleShape m_Circle;
