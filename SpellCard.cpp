@@ -1,21 +1,17 @@
 #include "Bullet.h"
 #include "SpellCard.h"
 
-SpellCard::SpellCard(ObjectManager *ts, MathVector pos, int nb_explosion, float interval):
-m_ToSpawn(ts),
-	m_MaxExplosion(nb_explosion),
-	m_Number(0),
-	m_ToExplode(nb_explosion, interval),
-	m_Position(pos)
-{
-}
-
-SpellCard::SpellCard(ObjectManager *ts, MathVector pos, std::list<float> list_delay):
+SpellCard::SpellCard(MathVector pos, ObjectManager *ts, std::list<float> list_delay):
 	m_ToSpawn(ts),
 	m_MaxExplosion(list_delay.size()),
 	m_Number(0),
 	m_ToExplode(list_delay),
 	m_Position(pos)
+{
+}
+
+SpellCard::SpellCard(MathVector pos, ObjectManager *ts, int nb_explosion, float interval):
+	SpellCard(pos, ts, std::list<float>(nb_explosion, interval))
 {
 }
 

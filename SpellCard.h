@@ -27,8 +27,8 @@
 class SpellCard: public Object
 {
 public:
-	SpellCard(ObjectManager *ts, MathVector pos, int nb_explosion, float interval);
-	SpellCard(ObjectManager *ts, MathVector pos, std::list<float> list_delay);
+	SpellCard(MathVector pos, ObjectManager *ts, std::list<float> list_delay);
+	SpellCard(MathVector pos, ObjectManager *ts, int nb_explosion, float interval);
 	virtual ~SpellCard(void);
 
 	void update(float dt) override final;

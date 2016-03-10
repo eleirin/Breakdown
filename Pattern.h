@@ -20,8 +20,8 @@ public:
 class Spiral : public SpellCard
 {
 public:
-	Spiral(ObjectManager *ts, MathVector pos):
-		SpellCard(ts, pos, 25, 0.1)
+	Spiral(MathVector pos, ObjectManager *ts):
+		SpellCard(pos, ts, 25, 0.1)
 	{
 	}
 

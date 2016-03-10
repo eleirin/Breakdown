@@ -2,12 +2,12 @@
 #include "ObjectManager.h"
 #include "Pattern.h"
 
-int main(int argc, char **argv)
+int main(void)
 {
 	sf::RenderWindow window(sf::VideoMode(800, 800), "Breakdown");
 	sf::Clock c;	
 	ObjectManager h;
-	Spiral s(&h, MathVector(400, 400));
+	Spiral s(MathVector(400, 400), &h);
 	
 	//Main loop
 	while(window.isOpen())
