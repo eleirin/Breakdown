@@ -3,7 +3,7 @@ BINDIR=bin/
 OBJDIR=obj/
 SRC=main.cpp Bullet.cpp ObjectManager.cpp Object.cpp SpellCard.cpp MathVector.cpp
 CC=g++
-CXXFLAGS=-W -Wall -Wextra -std=c++11
+CXXFLAGS=-W -Wall -Wextra -std=c++11 -g
 LDFLAGS=-lsfml-window -lsfml-graphics -lsfml-system
 OBJ=$(addprefix $(OBJDIR), $(SRC:.cpp=.o))
 EXEC=$(addprefix $(BINDIR), $(TITLE))
@@ -19,13 +19,13 @@ $(addprefix $(OBJDIR), main.o): main.cpp Pattern.h
 $(addprefix $(OBJDIR), %.o) : %.cpp %.h
 	$(CC) -o $@ -c $< $(CXXFLAGS)
 
-.PHONY: clean mrproper
+.PHONY: clean mrproper rebuild
 
 clean:
-	rm -rf $(OBJDIR)
-	mkdir $(OBJDIR)
+	rm -rf $(OBJDIR)/*
+	rm -rf .*.sw*
 
 mrproper: clean
-	rm -rf $(OBJDIR)
-	rm -rf $(BINDIR)
-	rm .*.sw*
+	rm -rf $(BINDIR)/*
+
+rebuild: clean all
