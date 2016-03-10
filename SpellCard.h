@@ -22,7 +22,7 @@
  * Finally, note that update is final, as we want the child to only work during the explosions. \todo{Draw is as well for now, as there is no way to update the position smoothly, but it will eventually be only override}
  * For better precision about how to create new patterns, see Pattern.h
  *
- * On internal note, this function simply create a delay queue that contains the delay to wait for the explosion _after the previous one_ (this is important, we stock delays relatively, which means that 3 explosions 0.1 seconds appart will be stocked as (0.1, 0.1, 0.1) not (0.1, 0.2, 0.3)
+ * On internal note, this function simply create a delay queue that contains the delay to wait for the explosion _after the previous one_ (\note{this is important, we stock delays relatively, which means that 3 explosions 0.1 seconds appart will be stocked as (0.1, 0.1, 0.1) not (0.1, 0.2, 0.3)})
  */
 class SpellCard: public Object
 {
