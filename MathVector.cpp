@@ -3,7 +3,6 @@
 #include <SFML/System/Vector2.hpp>
 #include "MathVector.h"
 
-const double pi = 3.14159265358979323846;
 MathVector::MathVector(const sf::Vector2f &v):
 	sf::Vector2f(v)
 {

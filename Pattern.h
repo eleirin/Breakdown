@@ -1,6 +1,7 @@
 #ifndef HEAD_PATTERN
 #define HEAD_PATTERN
 #include <cmath>
+#include "Constant.h"
 #include "ObjectManager.h"
 #include "Bullet.h"
 #include "SpellCard.h"

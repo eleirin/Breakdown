@@ -1,7 +1,7 @@
 TITLE=Breakdown
 BINDIR=bin/
 OBJDIR=obj/
-SRC=main.cpp Bullet.cpp ObjectManager.cpp Object.cpp SpellCard.cpp MathVector.cpp
+SRC=main.cpp Bullet.cpp Constant.cpp MathVector.cpp Object.cpp ObjectManager.cpp SpellCard.cpp 
 CC=g++
 CXXFLAGS=-W -Wall -Wextra -std=c++11 -g
 LDFLAGS=-lsfml-window -lsfml-graphics -lsfml-system
