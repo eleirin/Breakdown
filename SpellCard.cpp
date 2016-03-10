@@ -2,11 +2,11 @@
 #include "SpellCard.h"
 
 SpellCard::SpellCard(MathVector pos, ObjectManager *ts, std::list<float> list_delay):
+	Object(pos),
 	m_ToSpawn(ts),
 	m_MaxExplosion(list_delay.size()),
 	m_Number(0),
-	m_ToExplode(list_delay),
-	m_Position(pos)
+	m_ToExplode(list_delay)
 {
 }
 

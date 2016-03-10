@@ -22,7 +22,6 @@ private:
 		sf::CircleShape m_Circle;
 	} m_Sprite;
 
-	MathVector m_Position;
 	MathVector m_Direction;
 	float m_Vitesse;
 };

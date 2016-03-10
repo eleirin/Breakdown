@@ -1,6 +1,7 @@
 #include "Object.h"
 
-Object::Object(void):
+Object::Object(MathVector position):
+	m_Position(position),
 	m_Dead(false)
 {
 }

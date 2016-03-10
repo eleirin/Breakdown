@@ -2,8 +2,8 @@
 #include "Bullet.h"
 
 Bullet::Bullet(MathVector pos, MathVector direction, float vitesse) :
+	Object(pos),
 	m_Sprite(5),
-	m_Position(pos),
 	m_Direction(direction),
 	m_Vitesse(vitesse)
 {

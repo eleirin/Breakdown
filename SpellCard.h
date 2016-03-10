@@ -39,9 +39,6 @@ public:
 
 	virtual void explode(int i, int max) = 0;
 
-protected:
-	MathVector m_Position; /*!< The current position of the pattern. It only effects where the bullets will be spawned and is up to representation of the one using it*/
-
 private:
 	ObjectManager *m_ToSpawn; /*!< The object manager that will create the bullets we will need*/
 	const int m_MaxExplosion; /*!< The total number of explosion in the pattern*/
