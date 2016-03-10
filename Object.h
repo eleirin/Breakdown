@@ -8,7 +8,7 @@ class Object: public sf::Drawable
 public:
 	Object(MathVector position=MathVector(0, 0));
 	virtual ~Object(void);
-	bool dead(void);
+	bool isDead(void);
 	virtual void update(float dt) = 0;
 
 protected:

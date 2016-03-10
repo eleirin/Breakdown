@@ -10,8 +10,8 @@ Object::~Object(void)
 {
 }
 
-bool Object::dead(void)
+bool Object::isDead(void)
 {
-	return false;
+	return m_Dead;
 }
 

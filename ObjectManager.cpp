@@ -21,7 +21,7 @@ void ObjectManager::update(float dt)
 	{
 		(*i)->update(dt);
 
-		if((*i)->dead())
+		if((*i)->isDead())
 		{
 			DeadList.push_front(i);
 		}
