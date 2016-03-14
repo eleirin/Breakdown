@@ -1,14 +1,15 @@
 #include <SFML/Graphics.hpp>
 #include "ObjectManager.h"
 #include "Pattern.h"
+#include "Heroin.h"
 
 int main(void)
 {
 	sf::RenderWindow window(sf::VideoMode(800, 800), "Breakdown");
 	sf::Clock c;	
 	ObjectManager h;
-	Spiral s(MathVector(400, 400), &h);
-	
+	Heroin hero;
+
 	//Main loop
 	while(window.isOpen())
 	{
@@ -29,6 +30,8 @@ int main(void)
 				{
 				case sf::Keyboard::Escape:
 					window.close();
+				case sf::Keyboard::Space:
+					hero.jump();
 				default:
 					break;
 				}
@@ -39,12 +42,12 @@ int main(void)
 		}
 
 		//update
-		s.update(dt);
+		hero.update(dt);
 		h.update(dt);
 
 		//draw
 		window.clear();
-		window.draw(s);
+		window.draw(hero);
 		window.draw(h);
 		window.display();
 	}

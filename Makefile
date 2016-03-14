@@ -1,7 +1,7 @@
 TITLE=Breakdown
 BINDIR=bin/
 OBJDIR=obj/
-SRC=main.cpp Bullet.cpp Constant.cpp MathVector.cpp Object.cpp ObjectManager.cpp SpellCard.cpp 
+SRC=main.cpp Bullet.cpp Constant.cpp Heroin.cpp MathVector.cpp Object.cpp ObjectManager.cpp SpellCard.cpp 
 CC=g++
 CXXFLAGS=-W -Wall -Wextra -std=c++11 -g
 LDFLAGS=-lsfml-window -lsfml-graphics -lsfml-system
@@ -22,10 +22,10 @@ $(addprefix $(OBJDIR), %.o) : %.cpp %.h
 .PHONY: clean mrproper rebuild
 
 clean:
-	rm -rf $(OBJDIR)/*
+	rm -rf $(OBJDIR)*
 	rm -rf .*.sw*
 
 mrproper: clean
-	rm -rf $(BINDIR)/*
+	rm -rf $(BINDIR)*
 
 rebuild: clean all
