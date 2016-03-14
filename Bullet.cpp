@@ -1,7 +1,13 @@
 #include "MathVector.h"
 #include "Bullet.h"
 
-Bullet::Bullet(MathVector pos, MathVector direction, float vitesse) :
+/*! \brief Constructor of Bullet
+ *
+ * For now the parameters are not very refined. We will change the constructor as needs goes
+ */
+Bullet::Bullet( MathVector pos /*!< The initial position of the bullet*/,
+	        MathVector direction /*!< The initial direction in which the bullet will go*/,
+	        float speed /*!< The speed of the bullet*/) :
 	Object(pos),
 	m_Sprite(5),
 	m_Direction(direction),
