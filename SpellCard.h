@@ -27,23 +27,23 @@
 class SpellCard: public Object
 {
 public:
-	SpellCard(MathVector pos, ObjectManager *ts, std::list<float> list_delay);
-	SpellCard(MathVector pos, ObjectManager *ts, int nb_explosion, float interval);
-	virtual ~SpellCard(void);
+    SpellCard(MathVector pos, ObjectManager *ts, std::list<float> list_delay);
+    SpellCard(MathVector pos, ObjectManager *ts, int nb_explosion, float interval);
+    virtual ~SpellCard(void);
 
-	void update(float dt) override final;
-	void draw(sf::RenderTarget &, sf::RenderStates) const override;
+    void update(float dt) override final;
+    void draw(sf::RenderTarget &, sf::RenderStates) const override;
 
-	template<typename U> Bullet* spawn(void);
-	template<typename U> std::list<Bullet*> spawn(int duplicates);
+    template<typename U> Bullet* spawn(void);
+    template<typename U> std::list<Bullet*> spawn(int duplicates);
 
-	virtual void explode(int i, int max) = 0;
+    virtual void explode(int i, int max) = 0;
 
 private:
-	ObjectManager *m_ToSpawn; /*!< The object manager that will create the bullets we will need*/
-	const int m_MaxExplosion; /*!< The total number of explosion in the pattern*/
-	int m_Number; /*!< The number of explosion that already happened*/
-	std::list<float> m_ToExplode; /*!< The list of future explosion to arise*/
+    ObjectManager *m_ToSpawn; //!< The object manager that will create the bullets we will need
+    const int m_MaxExplosion; //!< The total number of explosion in the pattern
+    int m_Number; //!< The number of explosion that already happened
+    std::list<float> m_ToExplode; //!< The list of future explosion to arise
 };
 
 #include "SpellCard.tpp"

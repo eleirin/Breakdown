@@ -5,23 +5,16 @@
 #include <SFML/Graphics.hpp>
 #include "Object.h"
 
-enum Layers
-{
-	BULLETS = 0,
-	COUNT_LAYERS
-};
-
-class ObjectManager: public Object
+class ObjectManager: public AbstractObject
 {
 public:
-	ObjectManager(void);
-	virtual ~ObjectManager(void);
-	template<typename U, typename... Args> U* add(Args... args);
-	void update(float dt) override;
-	void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
+virtual ~ObjectManager(void);
+    template<typename U, typename... Args> U* add(Args... args);
+    void update(float dt) override;
+    void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
 
 private:
-	std::list<Object*> m_AliveList;
+    std::list<Object*> m_AliveList;
 };
 
 #include "ObjectManager.tpp"

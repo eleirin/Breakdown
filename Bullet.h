@@ -1,29 +1,31 @@
+/*! \file Bullet.h
+ *  \brief Gives a specification of Bullet*/
+
 #ifndef HEAD_BULLETS
 #define HEAD_BULLETS
 #include <SFML/Graphics.hpp>
 #include "Object.h"
 #include "MathVector.h"
 
+/*! \brief General class of bullets
+ *
+ * This class is not yet abstract, and should be turned into one as more bullet
+ * types thrive.
+ * 
+ * Right now, a bullet is only about position, direction and speed but that
+ * should change as needs go
+ */
 class Bullet: public Object
 {
 public:
-	Bullet(MathVector pos, MathVector direction, float vitesse);
-	virtual ~Bullet(void);
-	void update(float dt) override;
-	void draw(sf::RenderTarget &rt, sf::RenderStates s) const override final;
+    Bullet(MathVector pos, MathVector direction, float speed);
+    virtual ~Bullet(void);
+    void update(float dt) override;
+    void draw(sf::RenderTarget &rt, sf::RenderStates s) const override final;
 
 private:
-	struct Sprite: public sf::Drawable
-	{
-		Sprite(int Diameter);
-		virtual ~Sprite();
-		void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
-		void setPosition(MathVector xy);
-		sf::CircleShape m_Circle;
-	} m_Sprite;
-
-	MathVector m_Direction;
-	float m_Vitesse;
+    MathVector m_Direction; //!< The direction of the bullet \note{Magnitude does _not_ matter}
+    float m_Speed; //!< The speed of the bullet
 };
 
 

@@ -5,9 +5,10 @@
 
 int main(void)
 {
-	sf::RenderWindow window(sf::VideoMode(800, 800), "Breakdown");
+	sf::RenderWindow window(sf::VideoMode(400, 400), "Breakdown");
 	sf::Clock c;	
 	ObjectManager h;
+	Spiral s(MathVector(1, 1), &h);
 	Heroin hero;
 
 	//Main loop
@@ -43,11 +44,13 @@ int main(void)
 
 		//update
 		hero.update(dt);
+		s.update(dt);
 		h.update(dt);
 
 		//draw
 		window.clear();
 		window.draw(hero);
+		window.draw(s);
 		window.draw(h);
 		window.display();
 	}
