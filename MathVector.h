@@ -7,7 +7,7 @@ struct MathVector: public sf::Vector2f
 {
 public:
     using sf::Vector2f::Vector2f;
-    MathVector(const sf::Vector2f &v);
+    MathVector(const sf::Vector2f &v = sf::Vector2f(0, 0));
     MathVector(double angle);
     virtual ~MathVector(void);
     
