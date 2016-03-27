@@ -20,9 +20,14 @@ FunctionLine::operator sf::VertexArray(void) const
     for(int i = 0; i <= m_Steps; i++)
     {
         const float t = float(i) / m_Steps;
-        const float fint = 1.f - t;
+        const float invt = 1.f - t;
         result[i].position = m_Fun(t);
-        result[i].color = sf::Color(t * m_Begin.r + fint * m_End.r, t * m_Begin.g + fint * m_End.g, t * m_Begin.b + fint * m_End.b);
+
+        const int t_color= t * 255;
+        const int invt_color= invt * 255;
+        const sf::Color begin_coef = sf::Color(invt_color, invt_color, invt_color);
+        const sf::Color end_coef = sf::Color(t_color, t_color, t_color);
+        result[i].color = begin_coef * m_Begin + end_coef * m_End;
     }
 
     return result;
