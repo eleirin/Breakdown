@@ -5,11 +5,13 @@
 int main(void)
 {
 	sf::RenderWindow window(sf::VideoMode(600, 600), "Breakdown");
-        std::array<sf::VertexArray, 100> a;
 
-        for(int i = 0; i < 100; i++)
+        const int size = 100;
+        std::array<sf::VertexArray, size> line;
+        
+        for(int i = 0; i < size; i++)
         {
-            a[i] = BezierLine<3>(std::array<MathVector, 3>{ {MathVector(0, 0), MathVector(600 - i*6, i * 6), MathVector(600, 600)} });
+            line[i] = BezierLine<4>(std::array<MathVector, 4>({ {MathVector(0, 0),  MathVector(0, 600 - i*6), MathVector(600 - i * 6, 0), MathVector(600, 600)} }));
         }
 
         bool t = true;
@@ -38,21 +40,20 @@ int main(void)
 			default:
 				break;
 			}
-		}
+                }
+		
 
                 //draw
 		window.clear();
-                for(int i = 0; i < 100; i++)
-                {
-                    window.draw(a[i]);
-                }
+                for(int i = 0; i < size; i++)
+                    window.draw(line[i]);
 
 		window.display();
 
                 if(t)
                 {
                     sf::Image screen = window.capture();
-                    screen.saveToFile("Waaaah.png");
+                    screen.saveToFile("Waaaah10.png");
                     t = false;
                 }
 	}
