@@ -45,7 +45,7 @@ BezierLine<N>::BezierLine(int steps):
 
         for(int i = 0; i < N; i++)
         {
-            ponderation[i] *= float(pow((1 - t), i) * pow(t, N - 1 - i));
+            ponderation[i] *= float(pow(t, i) * pow((1 - t), N - 1 - i));
         }
 
         return barycenter(ponderation, m_ControlPoints);
