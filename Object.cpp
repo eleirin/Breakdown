@@ -14,8 +14,6 @@ AbstractObject::~AbstractObject()
  *
  * This is a very generic function, it should be called everytime beetwen two
  * frames. The way the object will be updated depend on said objects
- *
- * \todo{Takes input as parameter as well}
  */
 void AbstractObject::update(
         float

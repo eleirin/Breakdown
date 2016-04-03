@@ -38,6 +38,10 @@ void Heroin::jump(void)
  */
 void Heroin::update(float dt)
 {
+    // Updates internal states based on keyboard
+    if(sf::Keyboard::isKeyPressed(key_jump))
+            jump();
+
     // Right now we fall only when we are jumping
     if(m_Jumping)
     {

@@ -31,12 +31,12 @@ int main(void)
 				{
 				case sf::Keyboard::Escape:
 					window.close();
-				case sf::Keyboard::Space:
-					hero.jump();
+
 				default:
 					break;
 				}
 				break;
+
 			default:
 				break;
 			}
