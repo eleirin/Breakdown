@@ -1,22 +1,7 @@
 var searchData=
 [
-  ['m_5falivelist',['m_AliveList',['../classObjectManager.html#a9d58ac630123710ab49a01c1ab15e0ed',1,'ObjectManager']]],
-  ['m_5fbegin',['m_Begin',['../classFunctionLine.html#a851e977f1c7f12355867e72dbcab1fce',1,'FunctionLine']]],
-  ['m_5fbinom',['m_Binom',['../classBezierLine.html#abb7704cde6e067465d2daa7fe89710a3',1,'BezierLine']]],
-  ['m_5fcircle',['m_Circle',['../structObject_1_1Sprite.html#a58b9a6bc3f8fc3b544374e78206f2577',1,'Object::Sprite']]],
-  ['m_5fcontrolpoints',['m_ControlPoints',['../classBezierLine.html#a06b2d0e44deb0cf4a56ecac1f32ea153',1,'BezierLine']]],
-  ['m_5fdead',['m_Dead',['../classObject.html#ae04b5e4585d5d8be0b3bce68e397343f',1,'Object']]],
-  ['m_5fdiameter',['m_Diameter',['../classObject.html#aa39fa04138e27566dbf34a8bde9a7960',1,'Object']]],
-  ['m_5fdirection',['m_Direction',['../classBullet.html#ae1c7a7008000badd869221188c7edc0e',1,'Bullet']]],
-  ['m_5fend',['m_End',['../classFunctionLine.html#a55cbe69597ead7699d5cf6b0ed507775',1,'FunctionLine']]],
-  ['m_5fforceinit',['m_ForceInit',['../classHeroin.html#a5b5c8de4acf3499a9f784c340d9af8fb',1,'Heroin']]],
-  ['m_5ffun',['m_Fun',['../classBezierLine.html#a12a0b6b06c7ae50188988d3fb0f1f0bd',1,'BezierLine::m_Fun()'],['../classFunctionLine.html#ac4b7a9753bf29f24ad842a84cd23a5c5',1,'FunctionLine::m_Fun()']]],
-  ['m_5fjumping',['m_Jumping',['../classHeroin.html#a1b6a13cd5eccfd8612e83ac5b4f088d5',1,'Heroin']]],
-  ['m_5fmaxexplosion',['m_MaxExplosion',['../classSpellCard.html#a864e96d3dd4c20b5af03f6d872f57db5',1,'SpellCard']]],
-  ['m_5fnumber',['m_Number',['../classSpellCard.html#a1f67634fc3d92ca42d5a771caca1dd24',1,'SpellCard']]],
-  ['m_5fposition',['m_Position',['../classObject.html#a4131697f41cd2678151e31ec3280af1a',1,'Object']]],
-  ['m_5fspeed',['m_Speed',['../classBullet.html#a25a1b03cc9b7f83cde67836112415005',1,'Bullet::m_Speed()'],['../classHeroin.html#a0448c6b13c3b2b20a7f3c80970f61a08',1,'Heroin::m_Speed()']]],
-  ['m_5fsteps',['m_Steps',['../classFunctionLine.html#a1b3756dfa1ba320522a7089afe07e3f5',1,'FunctionLine']]],
-  ['m_5ftoexplode',['m_ToExplode',['../classSpellCard.html#a67cd246cbd2d8da0dcaf26f86ed033d6',1,'SpellCard']]],
-  ['m_5ftospawn',['m_ToSpawn',['../classSpellCard.html#ad82a708d18bf5251aa2b83a0a5901058',1,'SpellCard']]]
+  ['key_5fdash',['key_dash',['../Constant_8cpp.html#a3cd28a7c22e3211418ebd9da0b31d8db',1,'key_dash():&#160;Constant.cpp'],['../Constant_8h.html#a3cd28a7c22e3211418ebd9da0b31d8db',1,'key_dash():&#160;Constant.cpp']]],
+  ['key_5ffocus',['key_focus',['../Constant_8cpp.html#a67ef63420cb306e8cdff690d41f5f020',1,'key_focus():&#160;Constant.cpp'],['../Constant_8h.html#a67ef63420cb306e8cdff690d41f5f020',1,'key_focus():&#160;Constant.cpp']]],
+  ['key_5fjump',['key_jump',['../Constant_8cpp.html#ab386086471dbe6b0ff02ffcae344c5b7',1,'key_jump():&#160;Constant.cpp'],['../Constant_8h.html#ab386086471dbe6b0ff02ffcae344c5b7',1,'key_jump():&#160;Constant.cpp']]],
+  ['key_5froll',['key_roll',['../Constant_8cpp.html#a627cfbf374ff2ce682a23d4c812151c6',1,'key_roll():&#160;Constant.cpp'],['../Constant_8h.html#a627cfbf374ff2ce682a23d4c812151c6',1,'key_roll():&#160;Constant.cpp']]]
 ];

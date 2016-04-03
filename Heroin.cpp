@@ -20,8 +20,6 @@ Heroin::~Heroin()
 
 /*! \brief Makes the heroin jump
  *
- * \todo{As for now, this function is public and is called by the main. In time it
- * should be called by the update function.}
  * The jump cannot be modified, and the heroin will fall as though under normal
  * gravity
  */

@@ -1,5 +1,5 @@
 /*! \file Constant.cpp
- *  Gives the value of the variables defined in Constant.h
+ *  \brief Gives the value of the variables defined in Constant.h
  */
 #include "Constant.h"
 

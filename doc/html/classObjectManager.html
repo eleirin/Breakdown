@@ -189,7 +189,7 @@ template&lt;typename U , typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Update all objects that were created by this <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>. </p>
-<p>It is to be noted that the function operates in two steps, first it updates all objects, then it deletes the dead ones. This is because first, we do not want to operate on memory and update at the same time, as some objects might point to an indice that is wrong in some functions and second because it is safer to have all the objects update in the same environment, and not have them modify the environment to the other </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>{Further encourage two steps decomposition by having a pre-update function?} </dd></dl>
+<p>It is to be noted that the function operates in two steps, first it updates all objects, then it deletes the dead ones. This is because first, we do not want to operate on memory and update at the same time, as some objects might point to an indice that is wrong in some functions and second because it is safer to have all the objects update in the same environment, and not have them modify the environment to the other </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>{Further encourage two steps decomposition by having a pre-update function?} </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dt</td><td>Time elapsed since last call of update </td></tr>

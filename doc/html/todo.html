@@ -80,26 +80,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classAbstractObject.html#ae5df20fed844f306d8ab5751a51aad99">AbstractObject::update</a>  (float dt)=0</dt>
-<dd>{Takes input as parameter as well}  </dd>
 <dt><a class="anchor" id="_todo000002"></a>Member <a class="el" href="classBezierLine.html#a3ba6dd99f1bdd75a01ae9309e91d8085">BezierLine&lt; N &gt;::barycenter</a>  (const std::array&lt; float, N &gt; &amp;ponderation, const std::array&lt; MathVector, N &gt; &amp;points)</dt>
 <dd><p class="startdd">{Move barycenter where it belongs (<a class="el" href="structMathVector.html" title="An augmented class of sf::Vector. ">MathVector</a>)}</p>
 <p class="enddd">{Throw exception when that happens}  </p>
 </dd>
 <dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="classBezierLine.html#a6e2940fe25ced76e37bbd0553ec84c49">BezierLine&lt; N &gt;::computeBinom</a>  (void)</dt>
 <dd>{Move computeBinom where it belongs (a math library/file)} </dd>
-<dt><a class="anchor" id="_todo000005"></a>Class <a class="el" href="classHeroin.html">Heroin</a>  </dt>
+<dt><a class="anchor" id="_todo000004"></a>Class <a class="el" href="classHeroin.html">Heroin</a>  </dt>
 <dd><p class="startdd">{Make her run} </p>
 <p>{Make her die when colliding with a bullet} </p>
 <p class="enddd">{Encapsulate the mechanics (jumping, double jump etc... In substructures}  </p>
 </dd>
-<dt><a class="anchor" id="_todo000004"></a>Member <a class="el" href="classHeroin.html#aab2dcafbdd7f673ddd9166c63d678cb6">Heroin::jump</a>  (void)</dt>
-<dd>{As for now, this function is public and is called by the main. In time it should be called by the update function.} The jump cannot be modified, and the heroin will fall as though under normal gravity  </dd>
-<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="classObjectManager.html#a0b5a0d3f7f90efa7b199df9203d25066">ObjectManager::update</a>  (float dt) override</dt>
+<dt><a class="anchor" id="_todo000005"></a>Member <a class="el" href="classObjectManager.html#a0b5a0d3f7f90efa7b199df9203d25066">ObjectManager::update</a>  (float dt) override</dt>
 <dd>{Further encourage two steps decomposition by having a pre-update function?}  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Class <a class="el" href="classSpellCard.html">SpellCard</a>  </dt>
+<dt><a class="anchor" id="_todo000007"></a>Class <a class="el" href="classSpellCard.html">SpellCard</a>  </dt>
 <dd>{Draw is as well for now, as there is no way to update the position smoothly, but it will eventually be only override} For better precision about how to create new patterns, see <a class="el" href="Pattern_8h.html">Pattern.h</a> </dd>
-<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="classSpellCard.html#a88339cb280c56e9c356af7128c365030">SpellCard::explode</a>  (int i, int max) const =0</dt>
+<dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="classSpellCard.html#a88339cb280c56e9c356af7128c365030">SpellCard::explode</a>  (int i, int max) const =0</dt>
 <dd><p class="startdd">{Summon new SpellCards}</p><ul>
 <li>Modify m_Position ( </li>
 </ul>
