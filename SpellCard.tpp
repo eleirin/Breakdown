@@ -1,5 +1,4 @@
 /*! \file SpellCard.tpp
- *  \brief Instantiate the template function of SpellCard
  */
 
 /*! \brief Creates a bullet of a certain type
@@ -14,7 +13,7 @@
  * \return A pointer to the bullet that was created. It can be accessed and modified normally.
  */
 template<typename U>
-Bullet *SpellCard::spawn(void)
+Bullet *SpellCard::spawn(void) const
 {
     Bullet *created = m_ToSpawn->add<U>(m_Position, m_Number, m_MaxExplosion);
     return created;
@@ -32,7 +31,9 @@ Bullet *SpellCard::spawn(void)
 * \return A list of pointers to all the bullets that were created. Each can be accessed and modified normally.
 */
 template<typename U>
-std::list<Bullet *> SpellCard::spawn(int duplicates)
+std::list<Bullet *> SpellCard::spawn(
+    int duplicates
+    /*!< Number of bullets to create at once*/) const
 {
     std::list<Bullet *> created;
 

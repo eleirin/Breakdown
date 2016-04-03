@@ -1,3 +1,5 @@
+/*! \file Object.h
+ */
 #ifndef HEAD_OBJECT
 #define HEAD_OBJECT
 #include "MathVector.h"
@@ -17,7 +19,13 @@ public:
     virtual void update(float dt) = 0;
 };
 
-/* For now we assume spherical object*/
+/*! \brief Type of every object that are killable or directly in game (e.g not HUB or particule
+ * effects).
+ *
+ * For now, we assume spherical objects. Such objects all have a sprite, and can
+ * die by setting their m_Dead flag to true in the update function (the ObjectManager will take care of
+ * deleting them)
+ */
 class Object: public AbstractObject
 {
 public:
@@ -29,17 +37,24 @@ public:
     void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
 
 protected:
+    MathVector m_Position; /*!< The current position of the object*/
+    bool m_Dead; /*!< Should always be false, if the object set it to true, it will be deleted*/
+
+private:
+    /*! \brief The sprite to draw the object
+     *
+     * A circle for now
+     */
     struct Sprite: public sf::Drawable
     {
         Sprite(int Diameter);
         virtual ~Sprite();
         void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
         void setPosition(MathVector xy);
-        sf::CircleShape m_Circle;
+
+        sf::CircleShape m_Circle; /*!< The content of the sprite*/
     } m_Sprite;
 
-    float m_Diameter;
-    MathVector m_Position;
-    bool m_Dead;
-};
+    const float m_Diameter; /*!< The diameter of the object*/
+    };
 #endif //HEAD_OBJECT

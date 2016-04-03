@@ -1,6 +1,5 @@
 /*! \file Bullet.h
- *  \brief Gives a specification of Bullet*/
-
+ */
 #ifndef HEAD_BULLETS
 #define HEAD_BULLETS
 #include <SFML/Graphics.hpp>
@@ -23,8 +22,8 @@ public:
     void update(float dt) override;
 
 private:
-    MathVector m_Direction; //!< The direction of the bullet \note{Magnitude does _not_ matter}
-    float m_Speed; //!< The speed of the bullet
+    MathVector m_Direction; /*!< The direction of the bullet \note{Magnitude does _not_ matter}*/
+    float m_Speed; /*!< The speed of the bullet*/
 };
 
 

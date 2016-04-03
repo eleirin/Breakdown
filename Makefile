@@ -1,31 +1,41 @@
-TITLE=Breakdown
-BINDIR=bin/
-OBJDIR=obj/
-SRC=main.cpp Bullet.cpp Constant.cpp Heroin.cpp MathVector.cpp Object.cpp ObjectManager.cpp SpellCard.cpp 
-CC=g++
-CXXFLAGS=-W -Wall -Wextra -std=c++11 -g
-LDFLAGS=-lsfml-window -lsfml-graphics -lsfml-system
-OBJ=$(addprefix $(OBJDIR), $(SRC:.cpp=.o))
-EXEC=$(addprefix $(BINDIR), $(TITLE))
+TITLE:=Breakdown
+BINDIR:=bin/
+OBJDIR:=obj/
+DOCDIR:=doc/
+DOXYFILE:=Doxyfile
 
-all:$(EXEC)
+CC:=g++
+CXXFLAGS:=-W -Wall -Wextra -std=c++11 -g
+LDFLAGS:=-lsfml-window -lsfml-graphics -lsfml-system
 
-$(EXEC): $(OBJ)
-	$(CC) -o $@ $^ $(LDFLAGS)
+SRC:=Bullet.cpp Constant.cpp Heroin.cpp MathVector.cpp Object.cpp ObjectManager.cpp SpellCard.cpp FunctionLine.cpp
+HDR:=$(SRC:.cpp=.h) Pattern.h  Bezier.tpp ObjectManager.tpp SpellCard.tpp
+SRC+=main.cpp
 
-$(addprefix $(OBJDIR), main.o): main.cpp Pattern.h
-	$(CC) -o $@ -c $< $(CXXFLAGS)
+OBJ:=$(addprefix $(OBJDIR),$(SRC:.cpp=.o))
+EXEC:=$(addprefix $(BINDIR),$(TITLE))
 
-$(addprefix $(OBJDIR), %.o) : %.cpp %.h
+all: exec doc
+
+exec: $(EXEC)
+
+doc: $(SRC) $(HDR) $(DOXYFILE)
+	doxygen $(DOXYFILE)
+
+$(EXEC): $(OBJ) $(HDR)
+	$(CC) -o $@ $(OBJ) $(LDFLAGS)
+
+$(addprefix $(OBJDIR),%.o): %.cpp
 	$(CC) -o $@ -c $< $(CXXFLAGS)
 
 .PHONY: clean mrproper rebuild
 
 clean:
 	rm -rf $(OBJDIR)*
-	rm -rf .*.sw*
+	rm -rf $(DOCDIR)*
 
 mrproper: clean
 	rm -rf $(BINDIR)*
+	rm -rf .*.sw*
 
 rebuild: clean all
