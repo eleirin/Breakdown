@@ -23,13 +23,6 @@ Bullet::~Bullet(void)
 {
 }
 
-/* UNCOMMENTED */
-void Bullet::draw(sf::RenderTarget &rt,
-          sf::RenderStates s) const
-{
-    rt.draw(m_Sprite, s);
-}
-
 /*! \brief Update the bullet
  *
  * Simply update the position of the bullet based on its direction and speed

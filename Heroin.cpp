@@ -39,9 +39,3 @@ void Heroin::update(float dt)
     }
     Object::update(dt);
 }
-
-void Heroin::draw(sf::RenderTarget &rt, sf::RenderStates s) const
-{
-    m_Sprite.draw(rt, s);
-}
-

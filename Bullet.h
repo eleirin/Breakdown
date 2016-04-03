@@ -21,7 +21,6 @@ public:
     Bullet(MathVector pos, MathVector direction, float speed);
     virtual ~Bullet(void);
     void update(float dt) override;
-    void draw(sf::RenderTarget &rt, sf::RenderStates s) const override final;
 
 private:
     MathVector m_Direction; //!< The direction of the bullet \note{Magnitude does _not_ matter}

@@ -21,11 +21,12 @@ public:
 class Object: public AbstractObject
 {
 public:
-    Object(float diameter=0, MathVector position=MathVector(0, 0));
+    Object(float diameter, MathVector position=MathVector(0, 0));
     virtual ~Object(void);
     bool isDead(void);
     bool isColliding(const Object &rhs);
-    void update(float dt) override;
+    void update(float dt) override = 0;
+    void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
 
 protected:
     struct Sprite: public sf::Drawable

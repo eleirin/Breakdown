@@ -9,7 +9,6 @@ public:
     Heroin();
     virtual ~Heroin();
     void jump(void);
-    void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
     void update(float dt) override;
 private:
     float m_ForceInit;
