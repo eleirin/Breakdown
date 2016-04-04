@@ -18,11 +18,12 @@
  * a VertexArray to save on efficiency.
  *
  * As of yet the colors of the curve are interpolated in RGB and recalculated
- * everytime \todo{Change that?} 
+ * everytime
  *
- * \todo{Turn FunctionLine into a movable object}
- * \todo{Add offset options and features to allow the user to use functions over
- * different sets}
+ * \todo Do not recompute the interpolation everytime
+ * \todo Turn FunctionLine into a movable object
+ * \todo Add offset options and features to allow the user to use functions over
+ * different sets
  */
 class FunctionLine: public sf::Drawable
 {

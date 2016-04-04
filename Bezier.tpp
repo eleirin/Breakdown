@@ -8,7 +8,8 @@
  *
  * This function shall be useful since the function of the bezier curve uses
  * them a lot
- * \todo{Move computeBinom where it belongs (a math library/file)}
+ *
+ * \todo Move computeBinom where it belongs (a math library/file)
  * 
  * \tparam N The rank on which we will compute the binom
  * \return An array of the binomials of rank N-1
@@ -37,7 +38,7 @@ std::array<float, N> BezierLine<N>::m_Binom = BezierLine<N>::computeBinom();
  *
  * This function will be very useful to a lot of parametric function
  * manipulation
- * \todo{Move barycenter where it belongs (MathVector)}
+ * \todo Move barycenter where it belongs (MathVector)
  *
  * \tparam N The number of points to take the barycenter of
  * \return The barycenter of all points pondered by their respective
@@ -50,7 +51,7 @@ MathVector BezierLine<N>::barycenter(
      *    ith point.
      * \warning{The sum of all the elements must be non-null, or it will cause
      * a division by zero elsewise}
-     * \todo{Throw exception when that happens}*/
+     * \todo Throw exception when the sum of ponderation is null*/
 
     const std::array<MathVector, N> &points
     /*!< The array of the points to ponder*/)

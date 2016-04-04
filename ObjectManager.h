@@ -12,6 +12,8 @@
  * Note that ObjectManager is itself an AbstractObject. There need not be a
  * single instance of Object Manager, as some objects may have their owns (for
  * instance, for particule effects)
+ *
+ * \todo Turn m_AliveList into a vector
  */
 class ObjectManager: public AbstractObject
 {

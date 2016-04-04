@@ -64,11 +64,12 @@ void SpellCard::update(
 /*! \brief The function to be called every specified time
  *
  * This function  
- * During the explosion, the child will be only able to do three of these things:
+ * During the explosion, the child will be only able to do those things :
  *   - spawn new bullets through the function spawn(), and modify said spawned bullets
- *   - \todo{Summon new SpellCards}
- *   - Modify m_Position (\todo{For now, the position of the bullet spawned through spawn is m_Position. Later, an offset parameter will change this relatively})
- *\todo{As of yet, there is no way for explode to know how much time have passed since its last call. There will be a new parameter to indicate that}
+ *   - Modify m_Position
+ *
+ * \todo For now, the position of the bullet spawned through spawn is m_Position. Add an offset parameter to change this relatively
+ * \todo As of yet, there is no way for explode to know how much time have passed since its last call. Add a new parameter to indicate that
  */
 void SpellCard::explode(int i, int max) const
 {

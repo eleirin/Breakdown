@@ -11,10 +11,10 @@
  * As for now, she can only jump, and not modify her jump in air. As the project
  * goes, we will see wether she should be able to control the magnitude of her
  * jump, of the way she runs.
- * \todo{Make her run}
- * \todo{Make her die when colliding with a bullet}
- * \todo{Encapsulate the mechanics (jumping, double jump etc... In
- * substructures}
+ * \todo Make her run
+ * \todo Make her die when colliding with a bullet
+ * \todo Encapsulate the mechanics (jumping, double jump etc...) In
+ * substructures
  */
 class Heroin: public Object
 {

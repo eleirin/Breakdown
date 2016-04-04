@@ -20,8 +20,8 @@ ObjectManager::~ObjectManager(void)
  * same time, as some objects might point to an indice that is wrong in some
  * functions and second because it is safer to have all the objects update in
  * the same environment, and not have them modify the environment to the other
- * \todo{Further encourage two steps decomposition by having a pre-update
- * function?}
+ * \todo Further encourage two steps decomposition by having a pre-update
+ * function?
  */
 void ObjectManager::update(
         float dt

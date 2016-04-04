@@ -10,11 +10,11 @@
  * This version allows us to have many more useful functions such as length,
  * normalized, in time we will have dot products and many more
  *
- * \note{All functions are const, modification will only happen through direct
+ * \note All functions are const, modification will only happen through direct
  * copy affectation. This is to keep a mathematical scheme and expected
- * behaviours.}
- * \note{All coordinates will be in the world coordinate and not in pixel, there
- * will be one function to transcribe between the two}
+ * behaviours.
+ * \note All coordinates will be in the world coordinate and not in pixel, there
+ * will be one function to transcribe between the two
  */
 struct MathVector: public sf::Vector2f
 {

@@ -40,6 +40,7 @@ void Heroin::update(float dt)
     if(sf::Keyboard::isKeyPressed(key_jump))
             jump();
 
+    //Fall
     // Right now we fall only when we are jumping
     if(m_Jumping)
     {

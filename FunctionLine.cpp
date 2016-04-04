@@ -52,7 +52,7 @@ FunctionLine::operator sf::VertexArray(void) const
         result[i].position = m_Fun(t);
 
         //RGB Interpolation from m_Begin to m_End
-        //\todo{Turn it into a HSV interpolation}
+        //\todo Turn the RGB interpolation into an HSV one
         const float invt = 1.f - t;
         const int t_color= t * 255;
         const int invt_color= invt * 255;
