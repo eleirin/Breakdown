@@ -85,6 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classAbstractObject-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AbstractObject Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -101,25 +103,41 @@ Inheritance diagram for AbstractObject:</div>
  <div class="center">
   <img src="classAbstractObject.png" usemap="#AbstractObject_map" alt=""/>
   <map id="AbstractObject_map" name="AbstractObject_map">
-<area href="classObject.html" title="Type of every object that are killable or directly in game (e.g not HUB or particule effects)..." alt="Object" shape="rect" coords="125,112,240,136"/>
-<area href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. " alt="ObjectManager" shape="rect" coords="250,112,365,136"/>
-<area href="classBullet.html" title="General class of bullets. " alt="Bullet" shape="rect" coords="0,168,115,192"/>
-<area href="classHeroin.html" title="Heroin.h. " alt="Heroin" shape="rect" coords="125,168,240,192"/>
-<area href="classSpellCard.html" title="Modular and abstract class that spawns bullet in a pattern. " alt="SpellCard" shape="rect" coords="250,168,365,192"/>
-<area href="classSpiral_1_1SpiralBullet.html" alt="Spiral::SpiralBullet" shape="rect" coords="0,224,115,248"/>
-<area href="classSpiral.html" title="A pattern that spawns bullet in a four-ways branched spiral. " alt="Spiral" shape="rect" coords="250,224,365,248"/>
+<area href="classInterface__ObjectManager.html" alt="Interface_ObjectManager" shape="rect" coords="0,112,157,136"/>
+<area href="classObject.html" title="Type of every object that are killable or directly in game (e.g not HUB or particule effects)..." alt="Object" shape="rect" coords="334,112,491,136"/>
+<area href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. " alt="ObjectManager&lt; T &gt;" shape="rect" coords="0,168,157,192"/>
+<area href="classBullet.html" title="General class of bullets. " alt="Bullet" shape="rect" coords="167,168,324,192"/>
+<area href="classHeroin.html" title="Heroin.h. " alt="Heroin" shape="rect" coords="334,168,491,192"/>
+<area href="classSpellCard.html" title="Modular and abstract class that spawns bullet in a pattern. " alt="SpellCard" shape="rect" coords="501,168,658,192"/>
+<area href="classSpiral_1_1SpiralBullet.html" alt="Spiral::SpiralBullet" shape="rect" coords="167,224,324,248"/>
+<area href="classSpiral.html" title="A pattern that spawns bullet in a four-ways branched spiral. " alt="Spiral" shape="rect" coords="501,224,658,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f95450d57eb7f6521240604841f2e59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f95450d57eb7f6521240604841f2e59"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractObject.html#a8f95450d57eb7f6521240604841f2e59">~AbstractObject</a> ()</td></tr>
-<tr class="memdesc:a8f95450d57eb7f6521240604841f2e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of <a class="el" href="classAbstractObject.html" title="Type of every objects in our game. ">AbstractObject</a>. <br /></td></tr>
-<tr class="separator:a8f95450d57eb7f6521240604841f2e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b67951ba4d9f9b1a65b20c36cd1cab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42b67951ba4d9f9b1a65b20c36cd1cab"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractObject.html#a42b67951ba4d9f9b1a65b20c36cd1cab">~AbstractObject</a> (void)</td></tr>
+<tr class="memdesc:a42b67951ba4d9f9b1a65b20c36cd1cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of <a class="el" href="classAbstractObject.html" title="Type of every objects in our game. ">AbstractObject</a>. <br /></td></tr>
+<tr class="separator:a42b67951ba4d9f9b1a65b20c36cd1cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5df20fed844f306d8ab5751a51aad99"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractObject.html#ae5df20fed844f306d8ab5751a51aad99">update</a> (float dt)=0</td></tr>
 <tr class="memdesc:ae5df20fed844f306d8ab5751a51aad99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the object.  <a href="#ae5df20fed844f306d8ab5751a51aad99">More...</a><br /></td></tr>
 <tr class="separator:ae5df20fed844f306d8ab5751a51aad99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2ede8c7ddefa1c3213bfd4271c666c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c2ede8c7ddefa1c3213bfd4271c666c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDead</b> (void)</td></tr>
+<tr class="separator:a2c2ede8c7ddefa1c3213bfd4271c666c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae89982b549f7309e20e1394dd0a4559c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae89982b549f7309e20e1394dd0a4559c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>die</b> (void)</td></tr>
+<tr class="separator:ae89982b549f7309e20e1394dd0a4559c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ad4b2eb4f555c952c731061a8c72dfd43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4b2eb4f555c952c731061a8c72dfd43"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_Dead</b></td></tr>
+<tr class="separator:ad4b2eb4f555c952c731061a8c72dfd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Type of every objects in our game. </p>
@@ -156,7 +174,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classObject.html#ab7e9e6a9b49cc74382459a21c060fce5">Object</a>, <a class="el" href="classSpellCard.html#a5ad494a0c898aea3b52a81d656e13a8e">SpellCard</a>, <a class="el" href="classHeroin.html#aad007f1f114a30cc336ffe8098429152">Heroin</a>, <a class="el" href="classBullet.html#a70d5dc9464885df94228b84f5b26edbb">Bullet</a>, and <a class="el" href="classObjectManager.html#a0b5a0d3f7f90efa7b199df9203d25066">ObjectManager</a>.</p>
+<p>Implemented in <a class="el" href="classObject.html#ab7e9e6a9b49cc74382459a21c060fce5">Object</a>, <a class="el" href="classSpellCard.html#a409fc78f9f7075af8c99de24a5febdfc">SpellCard</a>, <a class="el" href="classObjectManager.html#a149607c1ea9d1e2ad53f58a3485b5f17">ObjectManager&lt; T &gt;</a>, <a class="el" href="classHeroin.html#aad007f1f114a30cc336ffe8098429152">Heroin</a>, and <a class="el" href="classBullet.html#a70d5dc9464885df94228b84f5b26edbb">Bullet</a>.</p>
 
 </div>
 </div>

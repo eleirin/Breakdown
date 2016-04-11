@@ -26,5 +26,7 @@ private:
     float m_Speed; /*!< The speed of the bullet*/
 };
 
+#include "ObjectManager.h"
+typedef ObjectManager<Bullet> BulletManager;
 
 #endif //HEAD_BULLETS

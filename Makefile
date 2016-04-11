@@ -3,12 +3,13 @@ BINDIR:=bin/
 OBJDIR:=obj/
 DOCDIR:=doc/
 DOXYFILE:=Doxyfile
+LOG=log
 
 CC:=g++
 CXXFLAGS:=-W -Wall -Wextra -std=c++11 -g
 LDFLAGS:=-lsfml-window -lsfml-graphics -lsfml-system
 
-SRC:=Bullet.cpp Constant.cpp Heroin.cpp MathVector.cpp Object.cpp ObjectManager.cpp SpellCard.cpp FunctionLine.cpp
+SRC:=Bullet.cpp Constant.cpp Heroin.cpp MathVector.cpp Object.cpp SpellCard.cpp FunctionLine.cpp
 HDR:=$(SRC:.cpp=.h) Pattern.h  Bezier.tpp ObjectManager.tpp SpellCard.tpp
 SRC+=main.cpp
 

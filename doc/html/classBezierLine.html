@@ -178,7 +178,7 @@ Additional Inherited Members</h2></td></tr>
 class BezierLine&lt; N &gt;</h3>
 
 <p>A generic bezier line with N points. </p>
-<p>This class implements a dynamic bezier line. Any control points can be accessed and modified with the [] operator. It is to be noted that as of yet, the Bezier curve is recomputed every time. This is because the class design wants to be very simple of use and not have any afterDraw or update function, and it would be the only way to know wether a control point has been modified or not. This should however not be a problem: Keep the <a class="el" href="classBezierLine.html" title="A generic bezier line with N points. ">BezierLine</a> if you are about to change it, otherwise simply convert it to a VertexArray via its conversion operato. Moreover, the number of control points is fixed because adding or deleting one would imply recalculating Pascal's binom. That might change in the future.</p>
+<p>This class implements a dynamic bezier line. Any control points can be accessed and modified with the [] operator. It is to be noted that as of yet, the Bezier curve is recomputed every time. This is because the class design wants to be very simple of use and not have any afterDraw or update function, and it would be the only way to know wether * a control point has been modified or not. This should however not be a problem: Keep the <a class="el" href="classBezierLine.html" title="A generic bezier line with N points. ">BezierLine</a> if you are about to change it, otherwise simply convert it to a VertexArray via its conversion operato. Moreover, the number of control points is fixed because adding or deleting one would imply recalculating Pascal's binom. That might change in the future.</p>
 <p>This class simply computes a function that will be drawn by the <a class="el" href="classFunctionLine.html">FunctionLine</a> (see Wikipedia for the general function)</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -286,7 +286,7 @@ template&lt;int N&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute the barycenter of N points with their respective coefficients. </p>
-<p>This function will be very useful to a lot of parametric function manipulation </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>{Move barycenter where it belongs (<a class="el" href="structMathVector.html" title="An augmented class of sf::Vector. ">MathVector</a>)}</dd></dl>
+<p>This function will be very useful to a lot of parametric function manipulation </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Move barycenter where it belongs (<a class="el" href="structMathVector.html" title="An augmented class of sf::Vector. ">MathVector</a>)</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">N</td><td>The number of points to take the barycenter of </td></tr>
@@ -301,7 +301,7 @@ template&lt;int N&gt; </div>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>{The sum of all the elements must be non-null, or it will cause a division by zero elsewise} </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>{Throw exception when that happens} </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Throw exception when the sum of ponderation is null </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">points</td><td>The array of the points to ponder </td></tr>
@@ -362,7 +362,8 @@ template&lt;int N&gt; </div>
 </div><div class="memdoc">
 
 <p>Compute all of the pascal binomials of rank N-1. </p>
-<p>This function shall be useful since the function of the bezier curve uses them a lot </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>{Move computeBinom where it belongs (a math library/file)}</dd></dl>
+<p>This function shall be useful since the function of the bezier curve uses them a lot</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Move computeBinom where it belongs (a math library/file)</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">N</td><td>The rank on which we will compute the binom </td></tr>

@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['m_5falivelist',['m_AliveList',['../classObjectManager.html#a9d58ac630123710ab49a01c1ab15e0ed',1,'ObjectManager']]],
+  ['m_5falivelist',['m_AliveList',['../classObjectManager.html#ac23959a3c4f8572466e7cace8a0d3505',1,'ObjectManager']]],
+  ['m_5fallbullets',['m_AllBullets',['../classHeroin.html#a065951e53936491bf8a5e658e95462c8',1,'Heroin']]],
   ['m_5fbegin',['m_Begin',['../classFunctionLine.html#a851e977f1c7f12355867e72dbcab1fce',1,'FunctionLine']]],
   ['m_5fbinom',['m_Binom',['../classBezierLine.html#abb7704cde6e067465d2daa7fe89710a3',1,'BezierLine']]],
   ['m_5fcircle',['m_Circle',['../structObject_1_1Sprite.html#a58b9a6bc3f8fc3b544374e78206f2577',1,'Object::Sprite']]],
   ['m_5fcontrolpoints',['m_ControlPoints',['../classBezierLine.html#a06b2d0e44deb0cf4a56ecac1f32ea153',1,'BezierLine']]],
-  ['m_5fdead',['m_Dead',['../classObject.html#ae04b5e4585d5d8be0b3bce68e397343f',1,'Object']]],
   ['m_5fdiameter',['m_Diameter',['../classObject.html#aa39fa04138e27566dbf34a8bde9a7960',1,'Object']]],
   ['m_5fdirection',['m_Direction',['../classBullet.html#ae1c7a7008000badd869221188c7edc0e',1,'Bullet']]],
   ['m_5fend',['m_End',['../classFunctionLine.html#a55cbe69597ead7699d5cf6b0ed507775',1,'FunctionLine']]],
@@ -18,5 +18,5 @@ var searchData=
   ['m_5fspeed',['m_Speed',['../classBullet.html#a25a1b03cc9b7f83cde67836112415005',1,'Bullet::m_Speed()'],['../classHeroin.html#a0448c6b13c3b2b20a7f3c80970f61a08',1,'Heroin::m_Speed()']]],
   ['m_5fsteps',['m_Steps',['../classFunctionLine.html#a1b3756dfa1ba320522a7089afe07e3f5',1,'FunctionLine']]],
   ['m_5ftoexplode',['m_ToExplode',['../classSpellCard.html#a67cd246cbd2d8da0dcaf26f86ed033d6',1,'SpellCard']]],
-  ['m_5ftospawn',['m_ToSpawn',['../classSpellCard.html#ad82a708d18bf5251aa2b83a0a5901058',1,'SpellCard']]]
+  ['m_5ftospawn',['m_ToSpawn',['../classSpellCard.html#a41117020cf858e86df677dd1b0fece17',1,'SpellCard']]]
 ];

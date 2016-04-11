@@ -37,7 +37,7 @@ public:
         }
     };
 
-    Spiral(MathVector pos, ObjectManager *ts):
+    Spiral(MathVector pos, BulletManager &ts):
         SpellCard(pos, ts, 25, 0.1)
     {
     }

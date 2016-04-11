@@ -2,7 +2,6 @@
  */
 
 #include <cmath>
-#include <iostream>
 
 /*! \brief Compute all of the pascal binomials of rank N-1
  *
@@ -78,24 +77,24 @@ BezierLine<N>::BezierLine(
     int steps
     /*!< The number of points we will use to smooth the curve*/)
 : 
-    FunctionLine(m_Fun, steps)
+    FunctionLine(m_Fun, steps),
+    m_Fun([this](float t)
+          {
+            // See wikipedia for the formula
+            std::array<float, N> ponderation = m_Binom;
+
+            for(int i = 0; i < N; i++)
+            {
+                ponderation[i] *= float(pow(t, i) * pow((1 - t), N - 1 - i));
+            }
+
+            return barycenter(ponderation, m_ControlPoints);
+          })
 {
    /* We define the function m_Fun
     * It is to be noted m_Fun will never be modified, thanks to the magic of
     * capture, only the points will be
     */
-   m_Fun = [this](float t)
-   {
-        // See wikipedia for the formula
-        std::array<float, N> ponderation = m_Binom;
-
-        for(int i = 0; i < N; i++)
-        {
-            ponderation[i] *= float(pow(t, i) * pow((1 - t), N - 1 - i));
-        }
-
-        return barycenter(ponderation, m_ControlPoints);
-   };
 }
 
 /*! \brief Constructor of a BezierCurve with predefined control points

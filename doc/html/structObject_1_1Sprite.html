@@ -110,7 +110,7 @@ Inheritance diagram for Object::Sprite:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b6df282cbbdc6163fcf8b6f9b1c5bbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structObject_1_1Sprite.html#a7b6df282cbbdc6163fcf8b6f9b1c5bbb">Sprite</a> (int Diameter)</td></tr>
-<tr class="memdesc:a7b6df282cbbdc6163fcf8b6f9b1c5bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="structObject_1_1Sprite.html" title="The sprite to draw the object. ">Sprite</a>.  <a href="#a7b6df282cbbdc6163fcf8b6f9b1c5bbb">More...</a><br /></td></tr>
+<tr class="memdesc:a7b6df282cbbdc6163fcf8b6f9b1c5bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Says wether an object is dead.  <a href="#a7b6df282cbbdc6163fcf8b6f9b1c5bbb">More...</a><br /></td></tr>
 <tr class="separator:a7b6df282cbbdc6163fcf8b6f9b1c5bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c9a2b9a1336b648ba2ff823fda5d52f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c9a2b9a1336b648ba2ff823fda5d52f"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structObject_1_1Sprite.html#a8c9a2b9a1336b648ba2ff823fda5d52f">~Sprite</a> ()</td></tr>
@@ -146,7 +146,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="structObject_1_1Sprite.html" title="The sprite to draw the object. ">Sprite</a>. </p>
+<p>Says wether an object is dead. </p>
+<p>If the object is dead but that it didn't get removed (see <a class="el" href="classObjectManager.html#a149607c1ea9d1e2ad53f58a3485b5f17" title="Update all objects that were created by this ObjectManager. ">ObjectManager::update</a> to see why) we do not want to consider it in our own update function.</p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The object is dead </td></tr>
+    <tr><td class="paramname">false</td><td>The object is still alive</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Constructor of <a class="el" href="structObject_1_1Sprite.html" title="The sprite to draw the object. ">Sprite</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Diameter</td><td>The size in pixel of the sprite </td></tr>

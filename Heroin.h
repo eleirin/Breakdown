@@ -4,6 +4,7 @@
 #ifndef HEAD_HEROIN
 #define HEAD_HEROIN
 #include "Object.h"
+#include "Bullet.h"
 #include "Constant.h"
 
 /*! \brief The main protagonist of this game.
@@ -19,11 +20,14 @@
 class Heroin: public Object
 {
 public:
-    Heroin();
+    Heroin(const BulletManager& all_bullets);
     virtual ~Heroin();
-    void jump(void);
     void update(float dt) override;
+
 private:
+    void jump(void);
+
+    const BulletManager &m_AllBullets; /*!< The bullets to die to*/
     const float m_ForceInit; /*!< How strong are her jump*/
     MathVector m_Speed; /*!< Her current vertical speed*/
     bool m_Jumping; /*!< Wether she is currently jumping or not*/

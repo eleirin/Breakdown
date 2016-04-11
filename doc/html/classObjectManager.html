@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Breakdown: ObjectManager Class Reference</title>
+<title>Breakdown: ObjectManager&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classObjectManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ObjectManager Class Reference</div>  </div>
+<div class="title">ObjectManager&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -97,57 +97,80 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="ObjectManager_8h_source.html">ObjectManager.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ObjectManager:</div>
+Inheritance diagram for ObjectManager&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classObjectManager.png" usemap="#ObjectManager_map" alt=""/>
-  <map id="ObjectManager_map" name="ObjectManager_map">
-<area href="classAbstractObject.html" title="Type of every objects in our game. " alt="AbstractObject" shape="rect" coords="0,56,100,80"/>
+  <img src="classObjectManager.png" usemap="#ObjectManager_3C_20T_20_3E_map" alt=""/>
+  <map id="ObjectManager_3C_20T_20_3E_map" name="ObjectManager&lt; T &gt;_map">
+<area href="classInterface__ObjectManager.html" alt="Interface_ObjectManager" shape="rect" coords="0,112,157,136"/>
+<area href="classAbstractObject.html" title="Type of every objects in our game. " alt="AbstractObject" shape="rect" coords="0,56,157,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a85ac8a1a6fc4edeeb9b0d41fd37b3a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85ac8a1a6fc4edeeb9b0d41fd37b3a30"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#a85ac8a1a6fc4edeeb9b0d41fd37b3a30">~ObjectManager</a> (void)</td></tr>
-<tr class="memdesc:a85ac8a1a6fc4edeeb9b0d41fd37b3a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>. <br /></td></tr>
-<tr class="separator:a85ac8a1a6fc4edeeb9b0d41fd37b3a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4e772cdf1e476aaff4984c3dca596dd"><td class="memTemplParams" colspan="2">template&lt;typename U , typename... Args&gt; </td></tr>
-<tr class="memitem:aa4e772cdf1e476aaff4984c3dca596dd"><td class="memTemplItemLeft" align="right" valign="top">U *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classObjectManager.html#aa4e772cdf1e476aaff4984c3dca596dd">add</a> (Args...args)</td></tr>
-<tr class="memdesc:aa4e772cdf1e476aaff4984c3dca596dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new object.  <a href="#aa4e772cdf1e476aaff4984c3dca596dd">More...</a><br /></td></tr>
-<tr class="separator:aa4e772cdf1e476aaff4984c3dca596dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b5a0d3f7f90efa7b199df9203d25066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#a0b5a0d3f7f90efa7b199df9203d25066">update</a> (float dt) override</td></tr>
-<tr class="memdesc:a0b5a0d3f7f90efa7b199df9203d25066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all objects that were created by this <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>.  <a href="#a0b5a0d3f7f90efa7b199df9203d25066">More...</a><br /></td></tr>
-<tr class="separator:a0b5a0d3f7f90efa7b199df9203d25066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4db2152029a022e2c3c2d22b5bc972b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4db2152029a022e2c3c2d22b5bc972b7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#a4db2152029a022e2c3c2d22b5bc972b7">draw</a> (sf::RenderTarget &amp;rt, sf::RenderStates s) const override</td></tr>
-<tr class="memdesc:a4db2152029a022e2c3c2d22b5bc972b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw all the objects that were created by this <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>. <br /></td></tr>
-<tr class="separator:a4db2152029a022e2c3c2d22b5bc972b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2005359e1ede9911880d9b8104c1069b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2005359e1ede9911880d9b8104c1069b"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#a2005359e1ede9911880d9b8104c1069b">~ObjectManager</a> (void)</td></tr>
+<tr class="memdesc:a2005359e1ede9911880d9b8104c1069b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>. <br /></td></tr>
+<tr class="separator:a2005359e1ede9911880d9b8104c1069b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2d28568672c7028f6667ce23e0b9a3"><td class="memTemplParams" colspan="2">template&lt;typename U , typename... Args&gt; </td></tr>
+<tr class="memitem:afa2d28568672c7028f6667ce23e0b9a3"><td class="memTemplItemLeft" align="right" valign="top">U *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classObjectManager.html#afa2d28568672c7028f6667ce23e0b9a3">add</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:afa2d28568672c7028f6667ce23e0b9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new object.  <a href="#afa2d28568672c7028f6667ce23e0b9a3">More...</a><br /></td></tr>
+<tr class="separator:afa2d28568672c7028f6667ce23e0b9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149607c1ea9d1e2ad53f58a3485b5f17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#a149607c1ea9d1e2ad53f58a3485b5f17">update</a> (float dt) override</td></tr>
+<tr class="memdesc:a149607c1ea9d1e2ad53f58a3485b5f17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all objects that were created by this <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>.  <a href="#a149607c1ea9d1e2ad53f58a3485b5f17">More...</a><br /></td></tr>
+<tr class="separator:a149607c1ea9d1e2ad53f58a3485b5f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92889d374e7794166ba7d0d4ed0889ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92889d374e7794166ba7d0d4ed0889ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#a92889d374e7794166ba7d0d4ed0889ea">draw</a> (sf::RenderTarget &amp;rt, sf::RenderStates s) const final</td></tr>
+<tr class="memdesc:a92889d374e7794166ba7d0d4ed0889ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw all the objects that were created by this <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>. <br /></td></tr>
+<tr class="separator:a92889d374e7794166ba7d0d4ed0889ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ac3d5ae7cf68867482d094033a6eb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5ac3d5ae7cf68867482d094033a6eb3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (const <a class="el" href="classObject.html">Object</a> &amp;rhs) const </td></tr>
+<tr class="separator:ab5ac3d5ae7cf68867482d094033a6eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAbstractObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAbstractObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAbstractObject.html">AbstractObject</a></td></tr>
-<tr class="memitem:a8f95450d57eb7f6521240604841f2e59 inherit pub_methods_classAbstractObject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f95450d57eb7f6521240604841f2e59"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractObject.html#a8f95450d57eb7f6521240604841f2e59">~AbstractObject</a> ()</td></tr>
-<tr class="memdesc:a8f95450d57eb7f6521240604841f2e59 inherit pub_methods_classAbstractObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of <a class="el" href="classAbstractObject.html" title="Type of every objects in our game. ">AbstractObject</a>. <br /></td></tr>
-<tr class="separator:a8f95450d57eb7f6521240604841f2e59 inherit pub_methods_classAbstractObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b67951ba4d9f9b1a65b20c36cd1cab inherit pub_methods_classAbstractObject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42b67951ba4d9f9b1a65b20c36cd1cab"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractObject.html#a42b67951ba4d9f9b1a65b20c36cd1cab">~AbstractObject</a> (void)</td></tr>
+<tr class="memdesc:a42b67951ba4d9f9b1a65b20c36cd1cab inherit pub_methods_classAbstractObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of <a class="el" href="classAbstractObject.html" title="Type of every objects in our game. ">AbstractObject</a>. <br /></td></tr>
+<tr class="separator:a42b67951ba4d9f9b1a65b20c36cd1cab inherit pub_methods_classAbstractObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2ede8c7ddefa1c3213bfd4271c666c inherit pub_methods_classAbstractObject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c2ede8c7ddefa1c3213bfd4271c666c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDead</b> (void)</td></tr>
+<tr class="separator:a2c2ede8c7ddefa1c3213bfd4271c666c inherit pub_methods_classAbstractObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9d58ac630123710ab49a01c1ab15e0ed"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classObject.html">Object</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#a9d58ac630123710ab49a01c1ab15e0ed">m_AliveList</a></td></tr>
-<tr class="separator:a9d58ac630123710ab49a01c1ab15e0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1387913f08fb1d3f96f1848ad780ab2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1387913f08fb1d3f96f1848ad780ab2"></a>
+const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_Name</b></td></tr>
+<tr class="separator:ab1387913f08fb1d3f96f1848ad780ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23959a3c4f8572466e7cace8a0d3505"><td class="memItemLeft" align="right" valign="top">std::list&lt; T * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjectManager.html#ac23959a3c4f8572466e7cace8a0d3505">m_AliveList</a></td></tr>
+<tr class="separator:ac23959a3c4f8572466e7cace8a0d3505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classAbstractObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAbstractObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAbstractObject.html">AbstractObject</a></td></tr>
+<tr class="memitem:ae89982b549f7309e20e1394dd0a4559c inherit pro_methods_classAbstractObject"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae89982b549f7309e20e1394dd0a4559c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>die</b> (void)</td></tr>
+<tr class="separator:ae89982b549f7309e20e1394dd0a4559c inherit pro_methods_classAbstractObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class that will manage the creation and the destructions of all objects. </p>
-<p>Note that <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a> is itself an <a class="el" href="classAbstractObject.html" title="Type of every objects in our game. ">AbstractObject</a>. There need not be a single instance of <a class="el" href="classObject.html" title="Type of every object that are killable or directly in game (e.g not HUB or particule effects)...">Object</a> Manager, as some objects may have their owns (for instance, for particule effects) </p>
+<div class="textblock"><h3>template&lt;typename T = AbstractObject&gt;<br />
+class ObjectManager&lt; T &gt;</h3>
+
+<p>A class that will manage the creation and the destructions of all objects. </p>
+<p>Note that <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a> is itself an <a class="el" href="classAbstractObject.html" title="Type of every objects in our game. ">AbstractObject</a>. There need not be a single instance of <a class="el" href="classObject.html" title="Type of every object that are killable or directly in game (e.g not HUB or particule effects)...">Object</a> Manager, as some objects may have their owns (for instance, for particule effects)</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Turn m_AliveList into a vector </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa4e772cdf1e476aaff4984c3dca596dd"></a>
+<a class="anchor" id="afa2d28568672c7028f6667ce23e0b9a3"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename U , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">U * ObjectManager::add </td>
+          <td class="memname">U * <a class="el" href="classObjectManager.html">ObjectManager</a>&lt; T &gt;::add </td>
           <td>(</td>
-          <td class="paramtype">Args...&#160;</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
         </tr>
@@ -156,25 +179,35 @@ template&lt;typename U , typename... Args&gt; </div>
 
 <p>Spawns a new object. </p>
 <p>This function will be used to create an object and store it in the <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a></p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">U</td><td>The type of the object to create. It shall be a subtype of T * </td></tr>
+    <tr><td class="paramname">Args</td><td>The list of type of the parameters </td></tr>
+    <tr><td class="paramname">Args</td><td>The list of the type of the arguments</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the created object </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">args</td><td>The list of the argument to give </td></tr>
+    <tr><td class="paramname">args</td><td>The list of the argument to give to the constructor of U </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a0b5a0d3f7f90efa7b199df9203d25066"></a>
+<a class="anchor" id="a149607c1ea9d1e2ad53f58a3485b5f17"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ObjectManager::update </td>
+          <td class="memname">void <a class="el" href="classObjectManager.html">ObjectManager</a>&lt; T &gt;::update </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>dt</em></td><td>)</td>
@@ -189,7 +222,7 @@ template&lt;typename U , typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Update all objects that were created by this <a class="el" href="classObjectManager.html" title="A class that will manage the creation and the destructions of all objects. ">ObjectManager</a>. </p>
-<p>It is to be noted that the function operates in two steps, first it updates all objects, then it deletes the dead ones. This is because first, we do not want to operate on memory and update at the same time, as some objects might point to an indice that is wrong in some functions and second because it is safer to have all the objects update in the same environment, and not have them modify the environment to the other </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>{Further encourage two steps decomposition by having a pre-update function?} </dd></dl>
+<p>It is to be noted that the function operates in two steps, first it updates all objects, then it deletes the dead ones. This is because first, we do not want to operate on memory and update at the same time, as some objects might point to an indice that is wrong in some functions and second because it is safer to have all the objects update in the same environment, and not have them modify the environment to the other </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Further encourage two steps decomposition by having a pre-update function? </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dt</td><td>Time elapsed since last call of update </td></tr>
@@ -202,15 +235,17 @@ template&lt;typename U , typename... Args&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a9d58ac630123710ab49a01c1ab15e0ed"></a>
+<a class="anchor" id="ac23959a3c4f8572466e7cace8a0d3505"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = AbstractObject&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::list&lt;<a class="el" href="classObject.html">Object</a>*&gt; ObjectManager::m_AliveList</td>
+          <td class="memname">std::list&lt;T*&gt; <a class="el" href="classObjectManager.html">ObjectManager</a>&lt; T &gt;::m_AliveList</td>
         </tr>
       </table>
   </td>
@@ -224,8 +259,8 @@ template&lt;typename U , typename... Args&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="Object_8h_source.html">Object.h</a></li>
 <li><a class="el" href="ObjectManager_8h_source.html">ObjectManager.h</a></li>
-<li><a class="el" href="ObjectManager_8cpp.html">ObjectManager.cpp</a></li>
 <li><a class="el" href="ObjectManager_8tpp.html">ObjectManager.tpp</a></li>
 </ul>
 </div><!-- contents -->

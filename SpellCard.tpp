@@ -15,7 +15,7 @@
 template<typename U>
 Bullet *SpellCard::spawn(void) const
 {
-    Bullet *created = m_ToSpawn->add<U>(m_Position, m_Number, m_MaxExplosion);
+    Bullet *created = m_ToSpawn.add<U>(m_Position, m_Number, m_MaxExplosion);
     return created;
 }
 
@@ -39,8 +39,16 @@ std::list<Bullet *> SpellCard::spawn(
 
     for(int i = 0; i < duplicates; i++)
     {
-        created.push_front(m_ToSpawn->add<U>(m_Position, m_Number, i, m_MaxExplosion));
+        created.push_front(m_ToSpawn.add<U>(m_Position, m_Number, i, m_MaxExplosion));
     }
 
     return created;
 }
+
+/*!
+ */
+/*template<typename U>
+void SpellCard::summon()
+{
+    static_cast<SpellCard*>(m_ToSpawn->add<U>(m_Number, m_MaxNumber));
+}*/

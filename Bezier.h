@@ -12,8 +12,7 @@
  * accessed and modified with the [] operator.
  * It is to be noted that as of yet, the Bezier curve is recomputed every time.
  * This is because the class design wants to be very simple of use and not have
- * any afterDraw or update function, and it would be the only way to know wether
- * a control point has been modified or not. This should however not be a
+ * any afterDraw or update function, and it would be the only way to know wether * a control point has been modified or not. This should however not be a
  * problem: Keep the BezierLine if you are about to change it, otherwise simply
  * convert it to a VertexArray via its conversion operato.
  * Moreover, the number of control points is fixed because adding or deleting one would imply recalculating Pascal's binom. That might change in the future.

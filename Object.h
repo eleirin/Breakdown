@@ -1,9 +1,11 @@
-/*! \file Object.h
- */
+/*! \file Object.h */
 #ifndef HEAD_OBJECT
 #define HEAD_OBJECT
 #include "MathVector.h"
 #include <SFML/Graphics.hpp>
+
+template<typename T>
+class ObjectManager;
 
 /*! \brief Type of every objects in our game
  *
@@ -15,8 +17,16 @@
 class AbstractObject: public sf::Drawable
 {
 public:
-    virtual ~AbstractObject();
+    AbstractObject(void);
+    virtual ~AbstractObject(void);
     virtual void update(float dt) = 0;
+    bool isDead(void);
+    
+protected:
+    void die(void);
+
+private:
+    bool m_Dead;
 };
 
 /*! \brief Type of every object that are killable or directly in game (e.g not HUB or particule
@@ -31,14 +41,14 @@ class Object: public AbstractObject
 public:
     Object(float diameter, MathVector position=MathVector(0, 0));
     virtual ~Object(void);
-    bool isDead(void);
     bool isColliding(const Object &rhs);
+    template<typename T>
+    bool isColliding(const ObjectManager<T> &rhs);
     void update(float dt) override = 0;
     void draw(sf::RenderTarget &rt, sf::RenderStates s) const override;
 
 protected:
     MathVector m_Position; /*!< The current position of the object*/
-    bool m_Dead; /*!< Should always be false, if the object set it to true, it will be deleted*/
 
 private:
     /*! \brief The sprite to draw the object
@@ -56,5 +66,7 @@ private:
     } m_Sprite;
 
     const float m_Diameter; /*!< The diameter of the object*/
-    };
+};
+
+#include "Object.tpp"
 #endif //HEAD_OBJECT

@@ -1,15 +1,19 @@
 #include <SFML/Graphics.hpp>
 #include "ObjectManager.h"
+#include "Bullet.h"
 #include "Pattern.h"
 #include "Heroin.h"
 
 int main(void)
 {
-	sf::RenderWindow window(sf::VideoMode(400, 400), "Breakdown");
+	sf::RenderWindow window(sf::VideoMode(500, 500), "Breakdown");
 	sf::Clock c;	
-	ObjectManager h;
-	Spiral s(MathVector(1, 1), &h);
-	Heroin hero;
+
+        MasterManager all_layers;
+        BulletManager *all_bullets = all_layers.add<BulletManager>();
+        ObjectManager<> *all_objects = all_layers.add<ObjectManager<>>();
+        all_objects->add<Heroin>(*all_bullets);
+        //all_objects->add<Spiral>(MathVector(1, 1), *all_bullets);
 
 	//Main loop
 	while(window.isOpen())
@@ -43,18 +47,13 @@ int main(void)
 		}
 
 		//update
-		hero.update(dt);
-		s.update(dt);
-		h.update(dt);
+                all_layers.update(dt);
 
 		//draw
 		window.clear();
-		window.draw(hero);
-		window.draw(s);
-		window.draw(h);
+		window.draw(all_layers);
 		window.display();
 	}
 
 	return 0;
-
 }

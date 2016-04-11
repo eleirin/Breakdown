@@ -4,8 +4,12 @@
 
 /*! \brief Constructor of Heroin
  */
-Heroin::Heroin():
-    Object(10, MathVector(0, 0)),
+Heroin::Heroin(
+        const BulletManager &ts
+        /*!< The manager of all bullets*/)
+:
+    Object(10, MathVector(2, 0)),
+    m_AllBullets(ts),
     m_ForceInit(5),
     m_Speed(0, 0),
     m_Jumping(false)
@@ -14,7 +18,7 @@ Heroin::Heroin():
 
 /*! \brief Destructor of Heroin
  */
-Heroin::~Heroin()
+Heroin::~Heroin(void)
 {
 }
 
@@ -54,5 +58,12 @@ void Heroin::update(float dt)
             m_Jumping = false;
         }
     }
+
+    //Dies if touching a bullet
+    if(isColliding(m_AllBullets))
+    {
+        die();
+    }
+
     Object::update(dt);
 }

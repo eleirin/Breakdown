@@ -2,6 +2,12 @@
  */
 #include "Object.h"
 
+AbstractObject::AbstractObject()
+:
+    m_Dead(false)
+{
+}
+
 /*** AbstractObject ***/
 
 /*! \brief Destructor of AbstractObject
@@ -21,6 +27,17 @@ void AbstractObject::update(
 {
 }
 
+bool AbstractObject::isDead(void)
+{
+    return m_Dead;
+}
+
+void AbstractObject::die(void)
+{
+    m_Dead = true;
+}
+
+
 /*** Object ***/
 
 /*! \brief Constructor of Object
@@ -33,7 +50,6 @@ Object::Object(
     /*!< The initial position of the object*/)
 :
     m_Position(position),
-    m_Dead(false),
     m_Sprite(diameter),
     m_Diameter(diameter)
 {
@@ -45,13 +61,8 @@ Object::~Object(void)
 {
 }
 
-/*! \brief Detects if two object are colliding
- *
- * This function is specific to spherical objects, remember to change it when
- * implementing other types of objects
- */
-bool Object::isColliding(
-    const Object &rhs
+
+bool Object::isColliding(const Object &rhs
     /*!< The object to test the collision with*/)
 {
     /* We use this cool trick of considering a bigger objects, and just test if
@@ -90,10 +101,6 @@ void Object::draw(sf::RenderTarget &rt, sf::RenderStates s) const
  * \retval true The object is dead
  * \retval false The object is still alive
  */
-bool Object::isDead(void)
-{
-    return m_Dead;
-}
 
 /*** Object::Sprite ***/
 
@@ -128,6 +135,8 @@ void Object::Sprite::setPosition(
         MathVector xy
         /*!< The position to set the sprite to*/)
 {
-    xy  = MathVector(0, 600) - float(pixel_per_meter) * xy;
+    xy.x = float(pixel_per_meter) * xy.x;
+    xy.y  = 500 - float(pixel_per_meter) * xy.y;
+
     m_Circle.setPosition(xy);
 }

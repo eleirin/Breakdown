@@ -11,7 +11,7 @@ SpellCard::SpellCard(
     MathVector pos,
     /*!< The original position of the pattern */
 
-    ObjectManager *ts,
+    BulletManager &ts,
     /*!< The object manager in which we will spawn the bullet*/
     
     std::list<float> list_delay
@@ -27,7 +27,7 @@ SpellCard::SpellCard(
 /*! \brief Construct a spell card that will explode every interval second
  *
  */
-SpellCard::SpellCard(MathVector pos, ObjectManager *ts, int nb_explosion, float interval):
+SpellCard::SpellCard(MathVector pos, BulletManager &ts, int nb_explosion, float interval):
     SpellCard(pos, ts, std::list<float>(nb_explosion, interval))
 {
 }
@@ -48,7 +48,7 @@ void SpellCard::update(
     //Nothing to be done -> Die
     if(m_ToExplode.empty())
     {
-        m_Dead = true;
+        die();
         return;
     }
 
@@ -71,7 +71,7 @@ void SpellCard::update(
  * \todo For now, the position of the bullet spawned through spawn is m_Position. Add an offset parameter to change this relatively
  * \todo As of yet, there is no way for explode to know how much time have passed since its last call. Add a new parameter to indicate that
  */
-void SpellCard::explode(int i, int max) const
+void SpellCard::explode(int, int) const
 {
 
 }

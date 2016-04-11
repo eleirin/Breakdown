@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['object',['Object',['../classObject.html',1,'']]],
-  ['objectmanager',['ObjectManager',['../classObjectManager.html',1,'']]]
+  ['node',['Node',['../structStrand_1_1Node.html',1,'Strand']]]
 ];
